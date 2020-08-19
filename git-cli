@@ -1,0 +1,7 @@
+git init (to initialize current directory as a repo on remote server)
+
+gitstatus (show files status)
+git add file1 (add file1 to local)
+git add . (add all untrack files to local)
+git commit -m "some comments"
+git push -u origin master OR git push -u "https://gitlab.com/msalman899/testproject.git" master (git push -u <repo> <branchname>
