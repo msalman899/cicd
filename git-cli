@@ -1,7 +1,13 @@
 git init (to initialize current directory as a repo on remote server)
 
 gitstatus (show files status)
-git add file1 (add file1 to local)
-git add . (add all untrack files to local)
-git commit -m "some comments"
+git add file1 (add file1 to stage)
+git add . (add all untrack files to stage)
+git commit -m "some comments" (push files from stage to commit snapshot)
 git push -u origin master OR git push -u "https://gitlab.com/msalman899/testproject.git" master (git push -u <repo> <branchname>
+
+git diff --staged
+
+git rm <filename> (to remove / untrack file both from remote and local project)
+git rm --cached <filename> (to remove file only from remote but keep / untrack it in local project)
+git mv filename filename1 (to rename file)
