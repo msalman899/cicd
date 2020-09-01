@@ -1,32 +1,46 @@
+-- initializing and cloning
 git init (to initialize current directory as a repo on remote server)
+git clone <gitrepourl> . (clone provided repo to current directory)
 git clone <gitrepourl> <projectname> (clone provided repo to <projectname> directory)
+git clone <gitrepourl> (create a dir with repo name and clone provided repo to it)
 
-gitstatus (show files status)
+-- check status
+git status (show files status)
+
+-- clearing changes made in local working directory
+git checkout --<filename> (discard all changes in working dir for mentioned file)
+
+-- review changes
+git diff (show the changes made in files)
+git diff --cached (show the changes made in files before add/commit)
+git diff --staged
+
+-- adding / committing files
 git add file1 (add file1 to stage)
 git add . (add all untrack files to stage)
 git commit -m "some comments" (push files from stage to commit snapshot)
-git commit -a -m "some comments" (push files from directly to commit state)
+git commit -am "some comments" (push files from directly to commit state)
 git reset <filename> (revert file back from stage to untrack state)
 git reset (revert ALL files back from stage to untrack state)
 
+-- branching
 git branch <brname> (create branch)
 git checkout <brname> (switch to branch)
-git branch (get the branch list)
+git branch (get the branch list in local repo)
+git branch -a (get the branch list both local and remote)
+git merge <branch-to-merged>  (standing at master, request to merge given branch)
+git merge --abort (revert merge in case of conflicts) 
 
+-- pulling / pushing changes
 git pull origin master (get the state of remote repo to see if someone has added changes in the interim)
 git push -u origin master OR git push -u "https://gitlab.com/msalman899/testproject.git" master (git push -u <repo> <branchname>)
 git push -u origin <feature-branch>
 
-git diff (show the changes made in files)
-git diff --staged
-
-git merge <branch-to-merged>  (standing at master, request to merge given branch)
-git merge --abort (revert merge in case of conflicts) 
-
+-- logging
 git log (show commit details)
 git log --oneline
 
-
+-- misc
 git rm <filename> (to remove / untrack file both from remote and local project)
 git rm --cached <filename> (to remove file only from remote but keep (untrack) it in local project)
 git mv filename filename1 (to rename file)
