@@ -39,6 +39,7 @@ git push -u origin <feature-branch>
 -- logging
 git log (show commit details)
 git log --oneline
+git log --oneline --decorate --graph --all (graphical view)
 
 -- misc
 git rm <filename> (to remove / untrack file both from remote and local project)
