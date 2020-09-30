@@ -23,6 +23,9 @@ git commit -am "some comments" (push files from directly to commit state)
 git reset <filename> (revert file back from stage to untrack state)
 git reset (revert ALL files back from stage to untrack state)
 
+-- reverting local commit
+git reset --soft HEAD^ (this will revert to last commit and revert all the committed files to staging)
+
 -- branching
 git branch <brname> (create branch)
 git checkout <brname> (switch to branch)
